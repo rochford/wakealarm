@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/alarmLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:textStyle="bold"
+    android:typeface="sans" >
+    <ListView
+        android:id="@+id/alarmListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+    </ListView>
+    <TextView
+        android:id="@+id/emptyView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/emptyListViewText"
+        android:textSize="25sp" />
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+        <ImageButton
+            android:id="@+id/btNewAlarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="startEditAlarmActivity"
+            android:contentDescription="@string/title_activity_edit_alarm"
+            android:src="@drawable/ic_new_alarm" />
+        <ImageButton
+            android:id="@+id/btNap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="startCountDownTimerDialog"
+            android:contentDescription="@string/powerNapBtn"
+            android:src="@drawable/ic_power_nap" />
+        <ImageButton
+            android:id="@+id/btSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="startSettings"
+            android:contentDescription="@string/title_activity_settings"
+            android:src="@drawable/ic_settings" />
+    </LinearLayout>
+</LinearLayout>

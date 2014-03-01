@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fi.fo.fum.wakealarm"
+    android:versionCode="1"
+    android:versionName="0.1" >
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="8" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="fi.fo.fum.wakealarm.AlarmMain"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver
+            android:name="fi.fo.fum.wakealarm.AlarmManagerBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <!--
+                 <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            -->
+        </receiver>
+        <!-- Start the Service if applicable on boot -->
+        <receiver
+            android:name="fi.fo.fum.wakealarm.ServiceStarter"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.ACTION_TIME_CHANGED" />
+                <action android:name="android.intent.action.ACTION_DATE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name="fi.fo.fum.wakealarm.Alarm"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_alarm"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="fi.fo.fum.wakealarm.ListFiles"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_file_list"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="fi.fo.fum.wakealarm.OptionsActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="fi.fo.fum.wakealarm.EditAlarmActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_edit_alarm"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="fi.fo.fum.wakealarm.SettingsActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="fi.fo.fum.wakealarm.AboutActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_about"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            android:name="fi.fo.fum.wakealarm.HelpActivity"
+            android:label="@string/title_activity_help" >
+        </activity>
+    </application>
+</manifest>

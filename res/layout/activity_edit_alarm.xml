@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditAlarmActivity" >
+    <LinearLayout
+        android:id="@+id/alarm_row_layout_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <EditText
+            android:id="@+id/alarmDescription"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1" >
+        </EditText>
+        <fi.fo.fum.wakealarm.DigitView
+            android:id="@+id/digitview"
+            android:gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+        </fi.fo.fum.wakealarm.DigitView>
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="97dp"
+            android:orientation="horizontal" >
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+                    <ToggleButton
+                        android:id="@+id/radioMon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:textOff="Mon"
+                        android:textOn="Mon" />
+                    <ToggleButton
+                        android:id="@+id/radioTue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:textOff="Tue"
+                        android:textOn="Tue" />
+                    <ToggleButton
+                        android:id="@+id/radioWed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:textOff="Wed"
+                        android:textOn="Wed" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+                    <ToggleButton
+                        android:id="@+id/radioThu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:textOff="Thu"
+                        android:textOn="Thu" />
+                    <ToggleButton
+                        android:id="@+id/radioFri"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:textOff="Fri"
+                        android:textOn="Fri" />
+                    <ToggleButton
+                        android:id="@+id/radioSat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:textOff="Sat"
+                        android:textOn="Sat" />
+                    <ToggleButton
+                        android:id="@+id/radioSun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:textOff="Sun"
+                        android:textOn="Sun" />
+                </LinearLayout>
+            </LinearLayout>
+        </RadioGroup>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <ImageButton
+                android:id="@+id/buttonOk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="setAlarm"
+                android:contentDescription="@string/save"
+                android:src="@drawable/ic_confirm" />
+            <ImageButton
+                android:id="@+id/buttonDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="deleteAlarm"
+                android:contentDescription="@string/delete"
+                android:src="@drawable/ic_delete" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

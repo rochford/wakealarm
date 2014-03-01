@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <fi.fo.fum.wakealarm.IntegerPreference
+    android:title="short nap length"
+	android:key="nap_short" 
+	android:summary="Nap short summary" 
+	android:inputType="number"
+	android:defaultValue="20" 
+	android:maxLength="2"
+	/>
+  <fi.fo.fum.wakealarm.IntegerPreference
+    android:title="long nap length"
+    android:key="nap_long"
+    android:summary="Nap long summary"
+    android:inputType="number" 
+    android:defaultValue="40"
+    android:maxLength="2"/>
+
+</PreferenceScreen>
