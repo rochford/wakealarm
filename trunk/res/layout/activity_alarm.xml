@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/alarmLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:onClick="stopAlarm" >
+    <TextView
+        android:id="@+id/textTimeNow"
+        style="@style/Alarm_Time_Large"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/time_now" />
+    <TextView
+        android:id="@+id/alarmDescriptionText"
+        style="@style/Alarm_Description_Large"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/textTimeNow"
+        android:text="@string/text_alarm_description" />
+    <TextView
+        android:id="@+id/disableAlarmText"
+        style="@style/Label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/alarmDescriptionText"
+        android:text="@string/stopAlarmText" />
+</RelativeLayout>

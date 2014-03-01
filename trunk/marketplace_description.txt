@@ -1,0 +1,24 @@
+
+I wrote this alarm clock for myself. Maybe others would like to use it.
+
+I wanted an alarm clock that:
+ - has a simple user interface
+ - I can press anywhere on the screen to stop the alarm
+ - No snooze feature
+ - Power Nap feature
+ - Able to set recurring alarms for days of the week.
+ 
+The application has been tested on my phone. I don't guarantee that it works on 
+your phone.  
+
+If you wish to see the source code then please visit the following page:
+XXX
+ 
+License 
+
+Audio content:
+rooster.mp3 (http://soundbible.com/1218-Rooster-Crow.html) by Mike Koenig is licensed under Attribution 3.0  (http://creativecommons.org/licenses/by/3.0/)
+beep.mp3 Recorded (http://soundbible.com/535-Alarm-Clock.html) by Mike Koenig is licensed under Attribution 3.0  (http://creativecommons.org/licenses/by/3.0/)
+railcrossing.mp3 (http://soundbible.com/2070-Railroad-Crossing-Bell.html) by Brylon Terry is licensed under Attribution 3.0  (http://creativecommons.org/licenses/by/3.0/)
+
+<sound>.mp3 by XXX. <URL> Licensed under Attribute 3.0 
