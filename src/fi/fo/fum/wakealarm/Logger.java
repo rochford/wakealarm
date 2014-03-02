@@ -23,6 +23,6 @@ import android.util.Log;
 public class Logger {
 
 	public static void log(String msg) {
-		Log.d("fi.fo.fum.wakealarm", msg);
+		// Log.d("fi.fo.fum.wakealarm", msg);
 	}
 }
