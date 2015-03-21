@@ -1,4 +1,7 @@
 # wakealarm
+
+https://play.google.com/store/apps/details?id=fi.fo.fum.wakealarm&hl=en
+
 I wrote this alarm clock for myself. Maybe others would like to use it.
 I wanted an alarm clock that:
 
@@ -9,3 +12,4 @@ I wanted an alarm clock that:
     Able to set recurring alarms for days of the week. 
 
 The application has been tested on my phone. I don't guarantee that it works on your phone. 
+
